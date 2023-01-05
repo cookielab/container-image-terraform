@@ -35,7 +35,7 @@ RUN chmod +x /usr/local/bin/gitlab-terraform
 
 FROM cookielab/slim:11.6
 
-RUN apt update && apt install -y openssl wget curl zip python3 tzdata jq git \
+RUN apt update && apt install -y openssl wget curl zip python3 tzdata jq git idn2 \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /usr/local/bin /usr/local/bin

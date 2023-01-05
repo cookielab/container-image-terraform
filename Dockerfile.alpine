@@ -35,7 +35,7 @@ RUN chmod +x /usr/local/bin/gitlab-terraform
 
 FROM cookielab/alpine:3.17
 
-RUN apk --update --no-cache add openssl wget curl zip python3 tzdata jq git
+RUN apk --update --no-cache add openssl wget curl zip python3 tzdata jq git idn2-utils
 
 COPY --from=build /usr/local/bin /usr/local/bin
 
