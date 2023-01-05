@@ -41,9 +41,9 @@ COPY --from=build /usr/local/bin /usr/local/bin
 
 ARG GITHUB_TOKEN
 
-COPY .tflint.hcl /container/
+USER 1987
+
+COPY --chown=container:container .tflint.hcl /container/
 RUN tflint --init
 
 ONBUILD USER root
-
-USER 1987
