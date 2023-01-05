@@ -40,8 +40,10 @@ RUN apt update && apt install -y openssl wget curl zip python3 tzdata jq git \
 
 COPY --from=build /usr/local/bin /usr/local/bin
 
+ARG GITHUB_TOKEN
+
 COPY .tflint.hcl /container/
-# RUN tflint --init
+RUN tflint --init
 
 ONBUILD USER root
 

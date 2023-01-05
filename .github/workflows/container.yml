@@ -74,6 +74,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ github.ref_name }}-slim
             public.ecr.aws/cookielab/terraform:${{ github.ref_name }}-slim
@@ -93,6 +94,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ github.ref_name }}-alpine
             public.ecr.aws/cookielab/terraform:${{ github.ref_name }}-alpine
@@ -112,6 +114,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-slim
             public.ecr.aws/cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-slim
@@ -131,6 +134,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
             public.ecr.aws/cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
@@ -150,6 +154,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-slim
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}
@@ -190,6 +195,7 @@ jobs:
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
             cookielab/terraform:${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}-alpine
