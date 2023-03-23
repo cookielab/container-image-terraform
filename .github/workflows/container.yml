@@ -11,7 +11,7 @@ env:
   tflint_version: '0.45.0'
   tfsec_version: '1.28.1'
   tf_summarize_version: '0.2.6'
-  gitlab_terraform: '0.50.3'
+  gitlab_terraform: '0.52.2'
 
 jobs:
   build:
