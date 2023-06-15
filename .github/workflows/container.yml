@@ -10,7 +10,7 @@ env:
   terraform_version: '1.4.6'
   tflint_version: '0.46.1'
   tfsec_version: '1.28.1'
-  tf_summarize_version: '0.2.6'
+  tf_summarize_version: '0.3.2'
   gitlab_terraform: '0.52.2'
 
 jobs:
