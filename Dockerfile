@@ -47,4 +47,6 @@ USER 1987
 COPY --chown=container:container .tflint.hcl /container/
 RUN tflint --init
 
+RUN touch /container/.terraformrc
+
 ONBUILD USER root
