@@ -1,6 +1,6 @@
-FROM cookielab/slim:11.6 AS build
+FROM cookielab/alpine:3.18 AS build
 
-RUN apt update && apt install -y wget zip
+RUN apk --update --no-cache add wget zip
 
 ARG TARGETARCH
 
