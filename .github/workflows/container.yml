@@ -8,7 +8,7 @@ on:
 
 env:
   terraform_version: '1.5.0'
-  tflint_version: '0.46.1'
+  tflint_version: '0.47.0'
   tfsec_version: '1.28.1'
   tf_summarize_version: '0.3.2'
   gitlab_terraform: '1.3.0'
