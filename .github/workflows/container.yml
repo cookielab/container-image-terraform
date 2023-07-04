@@ -7,7 +7,7 @@ on:
       - '**'
 
 env:
-  terraform_version: '1.5.1'
+  terraform_version: '1.5.2'
   tflint_version: '0.47.0'
   tfsec_version: '1.28.1'
   tf_summarize_version: '0.3.2'
