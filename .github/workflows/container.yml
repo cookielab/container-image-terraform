@@ -7,11 +7,11 @@ on:
       - '**'
 
 env:
-  terraform_version: '1.5.2'
-  tflint_version: '0.47.0'
-  tfsec_version: '1.28.1'
-  tf_summarize_version: '0.3.2'
-  gitlab_terraform: '1.4.0'
+  terraform_version: '1.5.2' # https://github.com/hashicorp/terraform/releases
+  tflint_version: '0.47.0' # https://github.com/terraform-linters/tflint/releases
+  tfsec_version: '1.28.1' # https://github.com/aquasecurity/tfsec/releases
+  tf_summarize_version: '0.3.2' # https://github.com/dineshba/tf-summarize/releases
+  gitlab_terraform: '1.4.0' # https://gitlab.com/gitlab-org/terraform-images/-/tags
 
 jobs:
   build:
