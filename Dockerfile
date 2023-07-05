@@ -33,7 +33,7 @@ ARG GITLAB_TERRAFORM
 RUN wget -q -O /usr/local/bin/gitlab-terraform https://gitlab.com/gitlab-org/terraform-images/-/raw/v${GITLAB_TERRAFORM}/src/bin/gitlab-terraform.sh
 RUN chmod +x /usr/local/bin/gitlab-terraform
 
-FROM cookielab/slim:11.6
+FROM cookielab/slim:12.0
 
 RUN apt update && apt install -y openssl wget curl zip python3 tzdata jq git idn2 \
   && apt-get clean && rm -rf /var/lib/apt/lists/*

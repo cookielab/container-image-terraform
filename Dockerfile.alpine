@@ -33,7 +33,7 @@ ARG GITLAB_TERRAFORM
 RUN wget -q -O /usr/local/bin/gitlab-terraform https://gitlab.com/gitlab-org/terraform-images/-/raw/v${GITLAB_TERRAFORM}/src/bin/gitlab-terraform.sh
 RUN chmod +x /usr/local/bin/gitlab-terraform
 
-FROM cookielab/alpine:3.17
+FROM cookielab/alpine:3.18
 
 RUN apk --update --no-cache add openssl wget curl zip python3 tzdata jq git idn2-utils
 
