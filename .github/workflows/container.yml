@@ -11,7 +11,7 @@ env:
   tflint_version: "0.49.0" # https://github.com/terraform-linters/tflint/releases
   tfsec_version: "1.28.4" # https://github.com/aquasecurity/tfsec/releases
   tf_summarize_version: "0.3.6" # https://github.com/dineshba/tf-summarize/releases
-  gitlab_terraform: "1.4.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
+  gitlab_terraform: "1.6.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
 
 jobs:
   build:
