@@ -2,16 +2,16 @@ name: Container Image
 on:
   push:
     branches:
-      - 'main'
-    tags:        
-      - '**'
+      - "main"
+    tags:
+      - "**"
 
 env:
-  terraform_version: '1.5.6' # https://github.com/hashicorp/terraform/releases
-  tflint_version: '0.48.0' # https://github.com/terraform-linters/tflint/releases
-  tfsec_version: '1.28.1' # https://github.com/aquasecurity/tfsec/releases
-  tf_summarize_version: '0.3.2' # https://github.com/dineshba/tf-summarize/releases
-  gitlab_terraform: '1.4.0' # https://gitlab.com/gitlab-org/terraform-images/-/tags
+  terraform_version: "1.6.5" # https://github.com/hashicorp/terraform/releases
+  tflint_version: "0.49.0" # https://github.com/terraform-linters/tflint/releases
+  tfsec_version: "1.28.4" # https://github.com/aquasecurity/tfsec/releases
+  tf_summarize_version: "0.3.6" # https://github.com/dineshba/tf-summarize/releases
+  gitlab_terraform: "1.6.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
 
 jobs:
   build:
@@ -54,7 +54,7 @@ jobs:
       - name: Parse version
         id: get-version
         uses: battila7/get-version-action@v2
-      
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
@@ -102,7 +102,7 @@ jobs:
             cookielab/terraform:${{ github.ref_name }}-alpine
             public.ecr.aws/cookielab/terraform:${{ github.ref_name }}-alpine
             ghcr.io/${{ github.repository }}:${{ github.ref_name }}-alpine
-      
+
       - name: Build and push - pre-release - slim
         uses: docker/build-push-action@v3
         timeout-minutes: 15
@@ -144,7 +144,7 @@ jobs:
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
             public.ecr.aws/cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
             ghcr.io/${{ github.repository }}:${{ steps.get-version.outputs.version-without-v }}-alpine
-      
+
       - name: Build and push - stable - slim
         uses: docker/build-push-action@v3
         timeout-minutes: 15
