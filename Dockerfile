@@ -25,7 +25,7 @@ RUN rm -f /tmp/tfsec
 ARG TF_SUMMARIZE_VERSION
 
 RUN wget -q -O /tmp/tf-sum.tar.gz https://github.com/dineshba/tf-summarize/releases/download/v${TF_SUMMARIZE_VERSION}/tf-summarize_linux_${TARGETARCH}.tar.gz
-RUN tar -xzf /usr/local/bin/tf-sum.tar.gz -C /usr/local/bin
+RUN tar -xzf /tmp/tf-sum.tar.gz -C /usr/local/bin
 RUN rm -f /tmp/tf-sum.tar.gz
 
 ARG GITLAB_TERRAFORM
