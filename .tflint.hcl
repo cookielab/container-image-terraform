@@ -1,6 +1,6 @@
 plugin "terraform" {
   enabled = true
-  version = "0.4.0" # https://github.com/terraform-linters/tflint-ruleset-terraform/releases
+  version = "0.5.0" # https://github.com/terraform-linters/tflint-ruleset-terraform/releases
   source  = "github.com/terraform-linters/tflint-ruleset-terraform"
 }
 
