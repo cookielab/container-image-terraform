@@ -90,7 +90,7 @@ rule "terraform_workspace_remote" {
 # https://github.com/terraform-linters/tflint-ruleset-aws/blob/master/docs/configuration.md
 plugin "aws" {
   enabled = true
-  version = "0.29.0" # https://github.com/terraform-linters/tflint-ruleset-aws/releases
+  version = "0.30.0" # https://github.com/terraform-linters/tflint-ruleset-aws/releases
   source  = "github.com/terraform-linters/tflint-ruleset-aws"
 
   deep_check = true
