@@ -1,6 +1,6 @@
 plugin "terraform" {
   enabled = true
-  version = "0.6.0" # https://github.com/terraform-linters/tflint-ruleset-terraform/releases
+  version = "0.7.0" # https://github.com/terraform-linters/tflint-ruleset-terraform/releases
   source  = "github.com/terraform-linters/tflint-ruleset-terraform"
 }
 
@@ -90,7 +90,7 @@ rule "terraform_workspace_remote" {
 # https://github.com/terraform-linters/tflint-ruleset-aws/blob/master/docs/configuration.md
 plugin "aws" {
   enabled = true
-  version = "0.30.0" # https://github.com/terraform-linters/tflint-ruleset-aws/releases
+  version = "0.31.0" # https://github.com/terraform-linters/tflint-ruleset-aws/releases
   source  = "github.com/terraform-linters/tflint-ruleset-aws"
 
   deep_check = true
