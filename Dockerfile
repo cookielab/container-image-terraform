@@ -18,9 +18,12 @@ RUN rm -f /tmp/tflint.zip
 
 ARG TFSEC_VERSION
 
-RUN wget -q -O /tmp/tfsec https://github.com/aquasecurity/tfsec/releases/download/v${TFSEC_VERSION}/tfsec-linux-${TARGETARCH}
-RUN install -v /tmp/tfsec /usr/local/bin
-RUN rm -f /tmp/tfsec
+RUN wget -q -O /tmp/tfsec.tar.gz https://github.com/aquasecurity/tfsec/releases/download/v${TFSEC_VERSION}/tfsec_${TFSEC_VERSION}_linux_${TARGETARCH}.tar.gz
+RUN mkdir -p /tmp/tfsec
+RUN tar -xzf /tmp/tfsec.tar.gz -C /tmp/tfsec
+RUN cp /tmp/tfsec/tfsec /usr/local/bin
+RUN cp /tmp/tfsec/tfsec-checkgen /usr/local/bin
+RUN rm -f /tmp/tfsec /tmp/tfsec.tar.gz
 
 ARG TF_SUMMARIZE_VERSION
 
