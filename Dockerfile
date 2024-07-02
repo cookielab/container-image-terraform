@@ -1,4 +1,4 @@
-FROM cookielab/slim:12.1 AS build
+FROM cookielab/slim:12.6 AS build
 
 RUN apt update && apt install -y wget zip
 
