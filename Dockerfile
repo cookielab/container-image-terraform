@@ -23,7 +23,7 @@ RUN mkdir -p /tmp/tfsec
 RUN tar -xzf /tmp/tfsec.tar.gz -C /tmp/tfsec
 RUN cp /tmp/tfsec/tfsec /usr/local/bin
 RUN cp /tmp/tfsec/tfsec-checkgen /usr/local/bin
-RUN rm -f /tmp/tfsec /tmp/tfsec.tar.gz
+RUN rm -rf /tmp/tfsec /tmp/tfsec.tar.gz
 
 ARG TF_SUMMARIZE_VERSION
 
