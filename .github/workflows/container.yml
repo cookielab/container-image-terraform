@@ -9,7 +9,7 @@ on:
 env:
   terraform_version: "1.9.0" # https://github.com/hashicorp/terraform/releases
   tflint_version: "0.51.2" # https://github.com/terraform-linters/tflint/releases
-  tfsec_version: "1.28.6" # https://github.com/aquasecurity/tfsec/releases
+  tfsec_version: "1.28.9" # https://github.com/aquasecurity/tfsec/releases
   tf_summarize_version: "0.3.10" # https://github.com/dineshba/tf-summarize/releases
   gitlab_terraform: "1.8.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
 
