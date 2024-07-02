@@ -1,4 +1,4 @@
-FROM cookielab/alpine:3.18 AS build
+FROM cookielab/alpine:3.20 AS build
 
 RUN apk --update --no-cache add wget zip
 
