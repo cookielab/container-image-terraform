@@ -36,6 +36,12 @@ ARG GITLAB_TERRAFORM
 RUN wget -q -O /usr/local/bin/gitlab-terraform https://gitlab.com/gitlab-org/terraform-images/-/raw/v${GITLAB_TERRAFORM}/src/bin/gitlab-terraform.sh
 RUN chmod +x /usr/local/bin/gitlab-terraform
 
+ARG GITLEAKS_VERSION
+
+RUN curl -fsSL -o /tmp/gitleaks.tar.gz https://github.com/zricethezav/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz
+RUN tar xzf /tmp/gitleaks.tar.gz -C /tmp && rm /tmp/gitleaks.tar.gz
+RUN mv /tmp/gitleaks /usr/local/bin/gitleaks && chmod +x /usr/local/bin/gitleaks
+
 FROM cookielab/slim:12.9
 
 RUN apt update && apt install -y openssl wget curl zip python3 tzdata jq git idn2 \

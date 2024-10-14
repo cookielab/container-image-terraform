@@ -12,6 +12,7 @@ env:
   tfsec_version: "1.28.13" # https://github.com/aquasecurity/tfsec/releases
   tf_summarize_version: "0.3.14" # https://github.com/dineshba/tf-summarize/releases
   gitlab_terraform: "1.8.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
+  gitleaks_version: "8.20.1" # https://github.com/gitleaks/gitleaks/releases
 
 jobs:
   build:
@@ -75,6 +76,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
@@ -96,6 +98,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
@@ -117,6 +120,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
@@ -138,6 +142,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
@@ -159,6 +164,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
@@ -201,6 +207,7 @@ jobs:
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
+            GITLEAKS_VERSION=${{ env.gitleaks_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
