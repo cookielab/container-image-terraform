@@ -7,11 +7,11 @@ on:
       - "**"
 
 env:
-  terraform_version: "1.11.0" # https://github.com/hashicorp/terraform/releases
-  tflint_version: "0.55.1" # https://github.com/terraform-linters/tflint/releases
-  tfsec_version: "1.28.13" # https://github.com/aquasecurity/tfsec/releases
-  tf_summarize_version: "0.3.14" # https://github.com/dineshba/tf-summarize/releases
-  gitlab_terraform: "1.8.0" # https://gitlab.com/gitlab-org/terraform-images/-/tags
+  terraform_version: "1.11.0" # renovate: datasource=github-releases depName=hashicorp/terraform
+  tflint_version: "0.55.1" # renovate: datasource=github-releases depName=terraform-linters/tflint
+  tfsec_version: "1.28.13" # renovate: datasource=github-releases depName=aquasecurity/tfsec
+  tf_summarize_version: "0.3.14" # renovate: datasource=github-releases depName=dineshba/tf-summarize
+  gitlab_terraform: "1.8.0" # renovate: datasource=gitlab-tags depName=gitlab-org/terraform-images
 
 jobs:
   build:
