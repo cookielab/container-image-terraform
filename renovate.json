@@ -6,5 +6,16 @@
   ],
   "assignees": [
     "jindraj"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [".*"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\s+.*?_version: \"(?<currentValue>.*?)\"\\s"
+      ],
+      "datasourceTemplate": "{{datasource}}",
+      "depNameTemplate": "{{depName}}",
+      "versioningTemplate": "semver"
+    }
   ]
 }
