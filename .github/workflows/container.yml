@@ -12,7 +12,7 @@ env:
   # renovate: datasource=github-releases depName=terraform-linters/tflint
   tflint_version: "0.56.0"
   # renovate: datasource=github-releases depName=aquasecurity/tfsec
-  tfsec_version: "1.28.13"
+  tfsec_version: "1.28.14"
   # renovate: datasource=github-releases depName=dineshba/tf-summarize
   tf_summarize_version: "0.3.14"
   # renovate: datasource=gitlab-releases depName=gitlab-org/terraform-images
