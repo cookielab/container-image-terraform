@@ -10,6 +10,12 @@ RUN wget -q -O /tmp/terraform.zip https://releases.hashicorp.com/terraform/${TER
 RUN unzip /tmp/terraform.zip -d /usr/local/bin
 RUN rm /tmp/terraform.zip
 
+ARG OPENTOFU_VERSION
+
+RUN wget -q -O /tmp/opentofu.tar.gz https://github.com/opentofu/opentofu/releases/download/v${OPENTOFU_VERSION}/tofu_${OPENTOFU_VERSION}_linux_${TARGETARCH}.tar.gz
+RUN tar -xzf /tmp/opentofu.tar.gz -C /usr/local/bin
+RUN rm /tmp/opentofu.tar.gz
+
 ARG TFLINT_VERSION
 
 RUN wget -q -O /tmp/tflint.zip https://github.com/terraform-linters/tflint/releases/download/v${TFLINT_VERSION}/tflint_linux_${TARGETARCH}.zip
@@ -35,6 +41,11 @@ ARG GITLAB_TERRAFORM
 
 RUN wget -q -O /usr/local/bin/gitlab-terraform https://gitlab.com/gitlab-org/terraform-images/-/raw/v${GITLAB_TERRAFORM}/src/bin/gitlab-terraform.sh
 RUN chmod +x /usr/local/bin/gitlab-terraform
+
+ARG GITLAB_TOFU
+
+RUN wget -q -O /usr/local/bin/gitlab-tofu https://gitlab.com/components/opentofu/-/raw/${GITLAB_TOFU}/src/gitlab-tofu.sh
+RUN chmod +x /usr/local/bin/gitlab-tofu
 
 FROM cookielab/alpine:3.21
 

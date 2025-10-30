@@ -9,6 +9,8 @@ on:
 env:
   # renovate: datasource=github-releases depName=hashicorp/terraform
   terraform_version: "1.13.4"
+  # renovate: datasource=github-releases depName=opentofu/opentofu
+  opentofu_version: "1.10.6"
   # renovate: datasource=github-releases depName=terraform-linters/tflint
   tflint_version: "0.59.1"
   # renovate: datasource=github-releases depName=aquasecurity/tfsec
@@ -17,6 +19,8 @@ env:
   tf_summarize_version: "0.3.14"
   # renovate: datasource=gitlab-releases depName=gitlab-org/terraform-images
   gitlab_terraform: "1.8.0"
+  # renovate: datasource=gitlab-releases depName=components/opentofu
+  gitlab_tofu: "3.10.0"
 
 jobs:
   build:
@@ -77,10 +81,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ env.terraform_version }}
+            OPENTOFU_VERSION=${{ env.opentofu_version }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ github.ref_name }}-slim
@@ -98,10 +104,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ env.terraform_version }}
+            OPENTOFU_VERSION=${{ env.opentofu_version }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ github.ref_name }}-alpine
@@ -119,10 +127,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
+            OPENTOFU_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-slim
@@ -140,10 +150,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
+            OPENTOFU_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
@@ -161,10 +173,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
+            OPENTOFU_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-slim
@@ -203,10 +217,12 @@ jobs:
           push: true
           build-args: |
             TERRAFORM_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
+            OPENTOFU_VERSION=${{ steps.get-version.outputs.major }}.${{ steps.get-version.outputs.minor }}.${{ steps.get-version.outputs.patch }}
             TFLINT_VERSION=${{ env.tflint_version }}
             TFSEC_VERSION=${{ env.tfsec_version }}
             TF_SUMMARIZE_VERSION=${{ env.tf_summarize_version }}
             GITLAB_TERRAFORM=${{ env.gitlab_terraform }}
+            GITLAB_TOFU=${{ env.gitlab_tofu }}
             GITHUB_TOKEN=${{ github.token }}
           tags: |
             cookielab/terraform:${{ steps.get-version.outputs.version-without-v }}-alpine
