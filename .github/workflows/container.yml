@@ -8,7 +8,7 @@ on:
 
 env:
   # renovate: datasource=github-releases depName=hashicorp/terraform
-  terraform_version: "1.14.3"
+  terraform_version: "1.14.4"
   # renovate: datasource=github-releases depName=terraform-linters/tflint
   tflint_version: "0.60.0"
   # renovate: datasource=github-releases depName=aquasecurity/tfsec
