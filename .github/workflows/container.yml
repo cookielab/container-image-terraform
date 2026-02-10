@@ -14,7 +14,7 @@ env:
   # renovate: datasource=github-releases depName=aquasecurity/tfsec
   tfsec_version: "1.28.14"
   # renovate: datasource=github-releases depName=dineshba/tf-summarize
-  tf_summarize_version: "0.3.14"
+  tf_summarize_version: "0.3.15"
   # renovate: datasource=gitlab-releases depName=gitlab-org/terraform-images
   gitlab_terraform: "1.8.0"
 
